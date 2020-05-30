@@ -13,4 +13,9 @@ class ActiveSupport::TestCase
 
   require "minitest/reporters"
   Minitest::Reporters.use!
+
+  def is_logged_in?
+    !session[:user_id].nil?
+  end
+
 end
