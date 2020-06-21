@@ -1,0 +1,43 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+project001:
+  content: "Great job on the new user interface."
+  created_at: <%= 10.minutes.ago %>
+  user: tony
+
+project002:
+  content: "The new signup method works perfectly."
+  created_at: <%= 2.months.ago %>
+  user: tony
+
+most_recent:
+  content: "Well done on the client demo today."
+  created_at: <%= Time.zone.now %>
+  user: tony
+
+<% 40.times do |n| %>
+snapshot_<%= n %>:
+  content: <%= Faker::Lorem.sentence(word_count: 5) %>
+  created_at: <%= 20.days.ago %>
+  user: tony
+<% end %>
+
+project010:
+  content: "Built a new user enquiry form"
+  created_at: <%= 1.day.ago %>
+  user: tony
+
+project011:
+  content: "Add new fields to the user application form"
+  created_at: <%= 2.months.ago %>
+  user: frank
+
+project012:
+  content: "Improved user authentication"
+  created_at: <%= 1.hour.ago %>
+  user: mary
+
+project013:
+  content: "New relay created to handle enquiry form"
+  created_at: <%= 18.minutes.ago %>
+  user: john

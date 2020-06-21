@@ -8,3 +8,9 @@ User.create!(name: "Test User", email: "test@testuser.com", password: "password1
   password = "password123"
   User.create!(name: name, email: email, password: password, password_confirmation: password)
 end
+
+users = User.order(:created_at).take(5)
+40.times do
+  content = Faker::Lorem.sentence(word_count: 5)
+  users.each { |user| user.snapshots.create!(content: content) }
+end
